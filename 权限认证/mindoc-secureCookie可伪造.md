@@ -33,7 +33,7 @@ func GetAppKey() string {
 	return web.AppConfig.DefaultString("app_key", "mindoc")
 }
 
-接使用就可以构造出login,cookie。感觉很像shiro的RememberMe。
+// 直接使用就可以构造出login,cookie。感觉很像shiro的RememberMe。
 SetSecureCookie("mindoc", "login", v, time.Now().Add(time.Hour*24*30).Unix())
 ```
 
